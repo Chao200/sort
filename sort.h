@@ -6,5 +6,6 @@
 #include "quickSort/quick_sort.h"   /* 随机快速排序 */
 #include "heapSort/heap_sort.h"     /* 堆排序 */
 #include "countSort/count_sort.h"     /* 计数排序 */
+#include "bucketSort/bucket_sort.h"     /* 桶排序 */
 
 #endif
