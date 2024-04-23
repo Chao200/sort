@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 测试 归并排序
 void test_mergeSort()
 {
     // 返回 15 个 1~100 的随机数
@@ -14,7 +15,7 @@ void test_mergeSort()
     print(res);
 }
 
-
+// 测试 随机快速排序
 void test_randomQuickSort()
 {
     srand((unsigned)time(NULL));
@@ -23,6 +24,17 @@ void test_randomQuickSort()
     print(nums);
     cout << "After randomQuickSort\n";
     randomQuickSort(nums, 0, nums.size()-1);
+    print(nums);
+}
+
+// 测试 堆排序
+void test_heapSort()
+{
+    // 返回 15 个 1~100 的随机数
+    auto nums = getRandomNumber(15);
+    print(nums);
+    cout << "After heapSort\n";
+    heapSort(nums);
     print(nums);
 }
 
@@ -35,5 +47,10 @@ int main()
     cout << "=================randomQuickSort=============\n";
     test_randomQuickSort();
     cout << "=============================================\n\n";
+
+    cout << "=================heapSort====================\n";
+    test_heapSort();
+    cout << "=============================================\n\n";
+
     return 0;
 }
