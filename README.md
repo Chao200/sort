@@ -20,8 +20,8 @@
 
 ## 归并排序
 
-- `merge_sort.cpp`
-- `merge_sort.h`
+- [`merge_sort.cpp`](./mergeSort/merge_sort.cpp)
+- [`merge_sort.h`](./mergeSort/merge_sort.h)
 
 分：不断二分
 
@@ -33,8 +33,8 @@
 
 ## 快速排序
 
-- `quick_sort.cpp`
-- `quick_sort.h`
+- [`quick_sort.cpp`](./quickSort/quick_sort.cpp)
+- [`quick_sort.h`](./quickSort/quick_sort.h)
 
 原地排序，选取主元 base，小于 base 的放在左侧，大于等于的在右侧
 
@@ -45,4 +45,19 @@
 - 时间复杂度: $O(n\cdot{logn})\sim{O(n^2)}$，如果每次选取的主元恰好是中位数，则在随机情况下，平均时间复杂度是  $O(n\cdot{logn})$；最坏情况，原数组已经有序，时间复杂度为 $O(n^2)$
 - 空间复杂度: $O(logn)\sim{O(n)}$，最坏情况就是原数组有序
 - 不稳定排序算法：选取的主元会被交换到相等元素的右侧
+
+## 堆排序
+
+- [`heap_sort.cpp`](./heapSort/heap_sort.cpp)
+- [`heap_sort.h`](./heapSort/heap_sort.h)
+
+根节点保持最大或最小性质，使用数组存储
+
+利用父节点和子节点之间索引关系，从而根据父节点可以找到子节点，也可以根据子节点找到父节点
+
+对于 $n$ 个节点的数组，从 $n/2$ 开始维持最大堆性质
+
+- 时间复杂度: $O(n\cdot{logn})$，时间花费在建立初始堆和下移调整，总共需要调整的节点个数是 $O(n)$ 的，每次调整下移的最大高度是 $O(logn)$，所以时间复杂度是 $O(n\cdot{logn})$
+- 空间复杂度: $O(1)$
+- 不稳定排序算法：在下移的过程，相等的元素相对位置可能发生变化
 
