@@ -1,6 +1,7 @@
 ## 归并排序
 
-`merge_sort.cpp`
+- `merge_sort.cpp`
+- `merge_sort.h`
 
 分：不断二分
 
