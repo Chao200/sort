@@ -1,3 +1,21 @@
+├── README.md
+├── main.cpp                // 测试
+├── makefile                // makefile
+├── sort.h                  // 各种排序算法头文件
+├── heapSort                // 堆排序
+│   ├── heap_sort.cpp
+│   └── heap_sort.h
+├── mergeSort               // 归并排序
+│   ├── merge_sort.cpp
+│   └── merge_sort.h
+├── quickSort               // 随机快速排序
+│   ├── quick_sort.cpp
+│   └── quick_sort.h
+└── util                    // 辅助函数，创建和输出数组
+    ├── util.cpp
+    └── util.h
+
+
 ## 归并排序
 
 - `merge_sort.cpp`
