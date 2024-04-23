@@ -18,6 +18,9 @@
 ├── countSort               // 计数排序
 │   ├── count_sort.cpp
 │   └── count_sort.h
+├── bucketSort              // 桶排序
+│   ├── bucket_sort.cpp
+│   └── bucket_sort.h
 └── util                    // 辅助函数，创建和输出数组
     ├── util.cpp
     └── util.h
