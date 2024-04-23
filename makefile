@@ -1,6 +1,6 @@
 CXX = g++
 TARGET = build
-OBJ = main.o util.o merge_sort.o quick_sort.o
+OBJ = main.o util.o merge_sort.o quick_sort.o heap_sort.o
 
 CXXFLAGS = -c -Wall -std=c++11
 
@@ -19,6 +19,8 @@ merge_sort.o: ./mergeSort/merge_sort.cpp
 quick_sort.o: ./quickSort/quick_sort.cpp
 	$(CXX)  $(CXXFLAGS) $(^) -o $(@)
 
+heap_sort.o: ./heapSort/heap_sort.cpp
+	$(CXX)  $(CXXFLAGS) $(^) -o $(@)
 
 .PHONY: clean
 clean:
