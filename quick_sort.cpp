@@ -2,7 +2,7 @@
 #include <vector>
 #include <random>
 
-#include "quickSort.h"
+#include "quick_sort.h"
 
 using namespace std;
 
