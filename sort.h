@@ -7,5 +7,6 @@
 #include "heapSort/heap_sort.h"     /* 堆排序 */
 #include "countSort/count_sort.h"     /* 计数排序 */
 #include "bucketSort/bucket_sort.h"     /* 桶排序 */
+#include "radixSort/radix_sort.h"     /* 基数排序 */
 
 #endif
