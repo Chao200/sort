@@ -1,6 +1,6 @@
 CXX = g++
 TARGET = build
-OBJ = main.o util.o merge_sort.o quick_sort.o heap_sort.o insert_sort.o count_sort.o
+OBJ = main.o util.o merge_sort.o quick_sort.o heap_sort.o insert_sort.o count_sort.o bucket_sort.o
 
 CXXFLAGS = -c -Wall -std=c++11
 
@@ -26,6 +26,9 @@ insert_sort.o: ./insertSort/insert_sort.cpp
 	$(CXX)  $(CXXFLAGS) $(^) -o $(@)
 
 count_sort.o: ./countSort/count_sort.cpp
+	$(CXX)  $(CXXFLAGS) $(^) -o $(@)
+
+bucket_sort.o: ./bucketSort/bucket_sort.cpp
 	$(CXX)  $(CXXFLAGS) $(^) -o $(@)
 
 .PHONY: clean
