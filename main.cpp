@@ -70,6 +70,17 @@ void test_bucketSort()
     print(res);
 }
 
+// 测试 基数排序
+void test_radixSort()
+{
+    // 返回 15 个 1~100 的随机数
+    auto nums = getRandomNumber(15);
+    print(nums);
+    cout << "After radixSort\n";
+    radixSort(nums);
+    print(nums);
+}
+
 int main()
 {
     cout << "=================insertSort====================\n";
@@ -94,6 +105,10 @@ int main()
 
     cout << "=================bucketSort====================\n";
     test_bucketSort();
+    cout << "=============================================\n\n";
+
+    cout << "=================radixSort====================\n";
+    test_radixSort();
     cout << "=============================================\n\n";
 
     return 0;
