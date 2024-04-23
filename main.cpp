@@ -4,6 +4,17 @@
 
 using namespace std;
 
+// 测试 插入排序
+void test_insertSort()
+{
+    // 返回 15 个 1~100 的随机数
+    auto nums = getRandomNumber(15);
+    print(nums);
+    cout << "After insertSort\n";
+    insertSort(nums);
+    print(nums);
+}
+
 // 测试 归并排序
 void test_mergeSort()
 {
@@ -40,6 +51,10 @@ void test_heapSort()
 
 int main()
 {
+    cout << "=================insertSort====================\n";
+    test_insertSort();
+    cout << "=============================================\n\n";
+
     cout << "=================mergerSort==================\n";
     test_mergeSort();
     cout << "=============================================\n\n";
