@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+
+#include "merge_sort.h"
+
 using namespace std;
 
 // 合
@@ -27,7 +30,6 @@ vector<int> merge(vector<int>& nums1, vector<int>& nums2)
     return res;
 }
 
-
 // 分
 vector<int> mergeSort(vector<int>& nums, int left, int right)
 {
@@ -37,21 +39,4 @@ vector<int> mergeSort(vector<int>& nums, int left, int right)
     vector<int> leftMerge = mergeSort(nums, left, mid);
     vector<int> rightMerge = mergeSort(nums, mid+1, right);
     return merge(leftMerge, rightMerge);
-}
-
-
-void print(const vector<int>& nums)
-{
-    for (int i = 0; i < nums.size(); ++i) cout << nums[i] << " ";
-    cout << endl;
-}
-
-int main()
-{
-    vector<int> nums = {-1, 0, -2, 1, 3, 2, 5, 4, 4};
-    print(nums);
-    cout << "After MergeSort\n";
-    auto res = mergeSort(nums, 0, nums.size()-1);
-    print(res);
-    return 0;
 }
