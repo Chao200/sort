@@ -8,7 +8,7 @@ using namespace std;
 // 合
 vector<int> merge(vector<int>& nums1, vector<int>& nums2)
 {
-    vector<int> res;
+    vector<int> res;        // 使用新的数组存储排序元素
     int n1, n2;
     for (n1 = 0, n2 = 0; n1 < nums1.size() && n2 < nums2.size(); )
     {
@@ -36,6 +36,7 @@ vector<int> mergeSort(vector<int>& nums, int left, int right)
     if (left == right) return {nums[left]};
 
     int mid = left + (right - left) / 2;
+    // 递归左右子区间
     vector<int> leftMerge = mergeSort(nums, left, mid);
     vector<int> rightMerge = mergeSort(nums, mid+1, right);
     return merge(leftMerge, rightMerge);
