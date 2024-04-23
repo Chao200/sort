@@ -3,19 +3,33 @@
 ├── main.cpp                // 测试
 ├── makefile                // makefile
 ├── sort.h                  // 各种排序算法头文件
-├── heapSort                // 堆排序
-│   ├── heap_sort.cpp
-│   └── heap_sort.h
+├── insertSort              // 插入排序
+│   ├── insert_sort.cpp
+│   └── insert_sort.h
 ├── mergeSort               // 归并排序
 │   ├── merge_sort.cpp
 │   └── merge_sort.h
 ├── quickSort               // 随机快速排序
 │   ├── quick_sort.cpp
 │   └── quick_sort.h
+├── heapSort                // 堆排序
+│   ├── heap_sort.cpp
+│   └── heap_sort.h
 └── util                    // 辅助函数，创建和输出数组
     ├── util.cpp
     └── util.h
 ```
+
+## 插入排序
+
+- [`insert_sort.cpp`](./insertSort/insert_sort.cpp)
+- [`insert_sort.h`](./insertSort/insert_sort.h)
+
+对每个元素遍历，并放到对应的位置
+
+- 时间复杂度: $O(n)\sim{O(n^2)}$，最好情况 $O(n)$，元素基本有序；平均和最坏是 $O(n^2)$
+- 空间复杂度: $O(1)$，原地排序
+- 稳定排序算法，每次讲元素插入到相等元素右边
 
 
 ## 归并排序
@@ -43,7 +57,7 @@
 引入随机选取 base
 
 - 时间复杂度: $O(n\cdot{logn})\sim{O(n^2)}$，如果每次选取的主元恰好是中位数，则在随机情况下，平均时间复杂度是  $O(n\cdot{logn})$；最坏情况，原数组已经有序，时间复杂度为 $O(n^2)$
-- 空间复杂度: $O(logn)\sim{O(n)}$，最坏情况就是原数组有序
+- 空间复杂度: $O(logn)\sim{O(n)}$，最坏情况就是原数组有序，递归的时候栈存储元素
 - 不稳定排序算法：选取的主元会被交换到相等元素的右侧
 
 ## 堆排序
