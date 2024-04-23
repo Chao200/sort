@@ -29,7 +29,6 @@ void test_mergeSort()
 // 测试 随机快速排序
 void test_randomQuickSort()
 {
-    srand((unsigned)time(NULL));
     // 返回 15 个 1~100 的随机数
     auto nums = getRandomNumber(15);
     print(nums);
@@ -49,6 +48,17 @@ void test_heapSort()
     print(nums);
 }
 
+// 测试 计数排序
+void test_countSort()
+{
+    // 返回 15 个 1~100 的随机数
+    auto nums = getRandomNumber(15);
+    print(nums);
+    cout << "After countSort\n";
+    auto res = countSort(nums);
+    print(res);
+}
+
 int main()
 {
     cout << "=================insertSort====================\n";
@@ -65,6 +75,10 @@ int main()
 
     cout << "=================heapSort====================\n";
     test_heapSort();
+    cout << "=============================================\n\n";
+
+    cout << "=================countSort====================\n";
+    test_countSort();
     cout << "=============================================\n\n";
 
     return 0;
