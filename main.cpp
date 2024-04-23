@@ -59,6 +59,17 @@ void test_countSort()
     print(res);
 }
 
+// 测试 桶排序
+void test_bucketSort()
+{
+    // 返回 15 个 1~100 的随机数
+    auto nums = getRandomNumber(15);
+    print(nums);
+    cout << "After bucketSort\n";
+    auto res = bucketSort(nums);
+    print(res);
+}
+
 int main()
 {
     cout << "=================insertSort====================\n";
@@ -79,6 +90,10 @@ int main()
 
     cout << "=================countSort====================\n";
     test_countSort();
+    cout << "=============================================\n\n";
+
+    cout << "=================bucketSort====================\n";
+    test_bucketSort();
     cout << "=============================================\n\n";
 
     return 0;
