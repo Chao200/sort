@@ -23,6 +23,13 @@
     └── util.h
 ```
 
+## 测试
+
+```shell
+make clean
+make && ./build
+```
+
 ## 插入排序
 
 - [`insert_sort.cpp`](./insertSort/insert_sort.cpp)
@@ -93,3 +100,17 @@
 - 时间复杂度: $O(n+m)$，其中 $n$ 是数组元素，$m$ 是最大值和最小值的差值
 - 空间复杂度: $O(m)$，不考虑原始数据
 - 稳定排序算法
+
+
+## 桶排序
+
+- [`bucket_sort.cpp`](./bucketSort/bucket_sort.cpp)
+- [`bucket_sort.h`](./bucketSort/bucket_sort.h)
+
+根据最大值和最小值的差值，划分出多个等间隔的区间，对每个区间内的数可以使用不同的排序算法，最后拼接
+
+打破了计数排序整数的限制，只要可以按照区间划分到不同的桶，都可以使用桶排序
+
+- 时间复杂度: $O(n)$
+- 空间复杂度: $O(n+m)$，$n$ 是数据个数，$m$ 是桶的个数
+- 稳定性取决于桶内使用的排序算法
